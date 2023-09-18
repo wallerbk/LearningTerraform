@@ -18,3 +18,9 @@ resource "linode_instance" "example_instance" {
     type        = "g6-nanode-1"
     root_pass   = "39 Black#Cats"
 }
+
+resource "linode_domain" "bearsystems_io" {
+    domain      = "bearsystems.io"
+    soa_email   = "bear@bearsystems.io"
+    type        = "master"
+}
