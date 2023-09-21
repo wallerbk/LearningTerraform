@@ -22,7 +22,7 @@ resource "linode_instance" "example_instance" {
     root_pass   = var.root_pass
 
     provisioner "file" {
-      source    = "source_script.sh"
+      source    = "setup_script.sh"
       destination = "/tmp/setup_script.sh"
 
       connection {
