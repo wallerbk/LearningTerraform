@@ -1,5 +1,6 @@
 #variables
 variable "token" {}
+variable "root_pass" {}
 terraform {
   required_providers {
     linode = {
@@ -18,7 +19,7 @@ resource "linode_instance" "example_instance" {
     image       = "linode/ubuntu23.04"
     region      = "us-southeast"
     type        = "g6-nanode-1"
-    root_pass   = "39 Black#Cats"
+    root_pass   = var.root_pass
 }
 
 resource "linode_domain" "bearsystems_io" {
