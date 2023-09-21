@@ -35,7 +35,7 @@ resource "linode_instance" "example_instance" {
     provisioner "remote-exec" {
       inline = [ 
         "chmod +x /tmp/setup_script.sh",
-        "tmp/setup_script.sh",
+        "/tmp/setup_script.sh",
         "sleep 1"
        ]
       
