@@ -1,3 +1,5 @@
+#variables
+variable "token" {}
 terraform {
   required_providers {
     linode = {
@@ -9,7 +11,7 @@ terraform {
 
 provider "linode" {
     # Configuration options
-    token       = "4aaf8c58bf19148fd9809c1f9e6af65a0572c70bdbf5f9516b96b663fb4c35ee"
+    token       = var.token
 }
 resource "linode_instance" "example_instance" {
     label       = "example_instance"
